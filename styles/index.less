@@ -1,0 +1,147 @@
+@head-top-height: 60px;
+@nav-link-color: greenyellow;
+//@nav-link-color: #D67630;
+
+header {
+	min-width: 600px;
+	width: 100%;
+	background: url("../imgs/header-bg.png");
+	overflow: hidden;
+
+	.header-top {
+		width: 100%;
+		height: @head-top-height;
+		background: url("../imgs/header-nav-bg.png");
+		position: fixed;
+	}
+	.header-main {
+		height: 140px;
+		padding-top: @head-top-height;
+	}
+
+	.container {
+		width: 978px;
+		height: 100%;
+		margin: 0 auto;
+	}
+	@media (max-width: 1000px) {
+		.container {
+			width: auto;
+		}
+	}
+
+	/*  Main Navigation  */
+	nav {
+		//		width: 650px;
+		height: 100%;
+		float: left;
+
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			height: 100%;
+
+			li {
+				height: 100%;
+				display: inline-block;
+				position: relative;
+
+				a {
+					&:link, &:visited {
+						font-family: Arial, Helvetica, Sans-Serif;
+						font-size: 12px;
+						font-weight: bold;
+						display: block;
+						margin: 0;
+						padding: 0 11px;
+						height: 100%;
+						color: #BEBEBE;
+						text-shadow: 0 -1px 0 rgba(10, 10, 10, 1);
+						line-height: 68px;
+					}
+					&:hover, &:active {
+						border: none;
+						color: @nav-link-color;
+					}
+				}
+
+				&#current {
+					a {
+						color: @nav-link-color;
+					}
+					span {
+						position: absolute;
+						display: block;
+						background: url("../imgs/selected.png") no-repeat 50% 0;
+						bottom: -9px;
+						height: 10px;
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+
+	/* Subscribe */
+	.subscribe-wrap {
+		width: 1000px;
+		height: @head-top-height;
+		display: table-cell;
+		vertical-align: middle;
+
+		.subscribe {
+			font-family: Arial, Helvetica, Sans-Serif;
+			font-size: 12px;
+			font-weight: bold;
+			line-height: 30px;
+			width: 150px;
+			height: 30px;
+			color: #BEBEBE;
+			text-shadow: 0 -1px 0 rgba(10, 10, 10, 1);
+			background: url("../images/rss32.png") no-repeat 0 center;
+			float: right;
+			padding-left: 28px;
+			margin-top: 6px;
+			margin-right: 68px;
+
+			a {
+				padding-right: 3px;
+				padding-left: 3px;
+				color: #ffffff;
+				&:hover, &:active {
+					color: @nav-link-color;
+				}
+			}
+		}
+	}
+
+	/* Logo */
+	.logo-wrap {
+		display: table-cell;
+		background: #adff2f;
+		height: 100%;
+		hgroup {
+			background: url("../images/logo.png") no-repeat;
+			height: 62px;
+			width: 215px;
+			display: block;
+			top: 100px;
+			left: 10px;
+			h1 {
+				margin: 0;
+				padding: 0;
+				a {
+					text-indent: -9999em;
+					display: block;
+					height: 48px;
+					width: 215px;
+				}
+			}
+			h3 {
+				text-indent: -9999em;
+				height: 0;
+			}
+		}
+	}
+}

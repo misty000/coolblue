@@ -1,0 +1,133 @@
+header {
+  min-width: 600px;
+  width: 100%;
+  background: url("../imgs/header-bg.png");
+  overflow: hidden;
+  /*  Main Navigation  */
+
+  /* Subscribe */
+
+  /* Logo */
+
+}
+header .header-top {
+  width: 100%;
+  height: 60px;
+  background: url("../imgs/header-nav-bg.png");
+  position: fixed;
+}
+header .header-main {
+  height: 140px;
+  padding-top: 60px;
+}
+header .container {
+  width: 978px;
+  height: 100%;
+  margin: 0 auto;
+}
+@media (max-width: 1000px) {
+  header .container {
+    width: auto;
+  }
+}
+header nav {
+  height: 100%;
+  float: left;
+}
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+header nav ul li {
+  height: 100%;
+  display: inline-block;
+  position: relative;
+}
+header nav ul li a:link,
+header nav ul li a:visited {
+  font-family: Arial, Helvetica, Sans-Serif;
+  font-size: 12px;
+  font-weight: bold;
+  display: block;
+  margin: 0;
+  padding: 0 11px;
+  height: 100%;
+  color: #BEBEBE;
+  text-shadow: 0 -1px 0 #0a0a0a;
+  line-height: 68px;
+}
+header nav ul li a:hover,
+header nav ul li a:active {
+  border: none;
+  color: #adff2f;
+}
+header nav ul li#current a {
+  color: #adff2f;
+}
+header nav ul li#current span {
+  position: absolute;
+  display: block;
+  background: url("../imgs/selected.png") no-repeat 50% 0;
+  bottom: -9px;
+  height: 10px;
+  width: 100%;
+}
+header .subscribe-wrap {
+  width: 1000px;
+  height: 60px;
+  display: table-cell;
+  vertical-align: middle;
+}
+header .subscribe-wrap .subscribe {
+  font-family: Arial, Helvetica, Sans-Serif;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 30px;
+  width: 150px;
+  height: 30px;
+  color: #BEBEBE;
+  text-shadow: 0 -1px 0 #0a0a0a;
+  background: url("../images/rss32.png") no-repeat 0 center;
+  float: right;
+  padding-left: 28px;
+  margin-top: 6px;
+  margin-right: 68px;
+}
+header .subscribe-wrap .subscribe a {
+  padding-right: 3px;
+  padding-left: 3px;
+  color: #ffffff;
+}
+header .subscribe-wrap .subscribe a:hover,
+header .subscribe-wrap .subscribe a:active {
+  color: #adff2f;
+}
+header .logo-wrap {
+  display: table-cell;
+  background: #adff2f;
+  height: 100%;
+}
+header .logo-wrap hgroup {
+  background: url("../images/logo.png") no-repeat;
+  height: 62px;
+  width: 215px;
+  display: block;
+  top: 100px;
+  left: 10px;
+}
+header .logo-wrap hgroup h1 {
+  margin: 0;
+  padding: 0;
+}
+header .logo-wrap hgroup h1 a {
+  text-indent: -9999em;
+  display: block;
+  height: 48px;
+  width: 215px;
+}
+header .logo-wrap hgroup h3 {
+  text-indent: -9999em;
+  height: 0;
+}
