@@ -1,13 +1,9 @@
-/* ----------------------------------------------------------------------------
-		G E N E R A L
-	----------------------------------------------------------------------------- */
 html {
   overflow-y: scroll;
 }
 body {
   font: 15px/24px Georgia, Serif;
   color: #454545;
-  background: url(../images/bg.png);
 }
 /* Links */
 a:link,
@@ -15,11 +11,6 @@ a:visited {
   text-decoration: none;
   color: #147DB6;
   outline: 0;
-}
-a:hover,
-a:focus,
-a:active {
-  color: #CC3300;
 }
 a:link.more,
 a:visited.more {
@@ -40,7 +31,14 @@ a:visited.more {
   -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3), inset 0 1px 0 #3ca5d2;
   -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3), inset 0 1px 0 #3ca5d2;
 }
-a:hover.more {
+a:hover,
+a:focus,
+a:active {
+  color: #CC3300;
+}
+a:hover.more,
+a:focus.more,
+a:active.more {
   border: 1px solid #B32D00;
   background-color: #CC3300;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3), inset 0 1px 0 #ff7242;
@@ -197,6 +195,12 @@ td {
   border-color: #E9E9E9;
   padding: .7em 1em;
 }
+.tbl {
+  display: table;
+}
+.tbl-cell {
+  display: table-cell;
+}
 /* Form */
 form {
   width: 500px;
@@ -204,10 +208,6 @@ form {
   padding: 32px 40px;
   background: #E9EAEB;
   border: 1px solid #DFE1E6;
-}
-input,
-select {
-  vertical-align: middle;
 }
 form div {
   border-bottom: 1px solid #D8DAE0;
@@ -243,9 +243,6 @@ form textarea {
   border-color: #DCDEE2 #E9EBED #E9EBED #DCDEE2;
   font: 13px 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Verdana, Sans-serif;
 }
-form textarea {
-  height: 325px;
-}
 form input:focus,
 form select:focus,
 form textarea:focus {
@@ -270,8 +267,19 @@ form input.button {
   -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3), inset 0 1px 0 #3ca5d2;
   -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3), inset 0 1px 0 #3ca5d2;
 }
+form textarea {
+  height: 325px;
+}
+input,
+select {
+  vertical-align: middle;
+}
+/* IE7 */
 .ie7 form input.button {
   padding: 0 2px;
+}
+.ie7 .clearfix {
+  zoom: 1;
 }
 #name,
 #email,
@@ -294,7 +302,6 @@ form input.button {
   clear: both;
   height: 0;
 }
-.ie7 .clearfix {
-  zoom: 1;
+.valign-middle {
+  vertical-align: middle;
 }
-/* IE7 */
